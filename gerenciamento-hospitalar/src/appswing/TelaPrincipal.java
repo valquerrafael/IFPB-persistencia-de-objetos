@@ -65,7 +65,7 @@ public class TelaPrincipal {
 		label.setHorizontalAlignment(SwingConstants.CENTER);
 		label.setText("Inicializando...");
 		label.setBounds(0, 0, 450, 313);
-		ImageIcon imagem = new ImageIcon(getClass().getResource("/gereciamento-hospitalar/imagem1.jpg"));
+		ImageIcon imagem = new ImageIcon(getClass().getResource("/arquivos/imagem1.jpg"));
 		imagem = new ImageIcon(imagem.getImage().getScaledInstance(label.getWidth(),label.getHeight(), Image.SCALE_DEFAULT));//		label.setIcon(fotos);
 		label.setIcon(imagem);
 		frame.getContentPane().add(label);
@@ -76,7 +76,7 @@ public class TelaPrincipal {
 		Atendimentos.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				TelaAtendimento tela = new TelaAtendimento();
+				TelaMedico tela = new TelaMedico();
 			}
 		});
 		menuBar.add(Atendimentos);

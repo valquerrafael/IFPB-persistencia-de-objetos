@@ -22,7 +22,7 @@ class FachadaMedico {
 
         if (medico != null) {
             DAO.rollback();
-            throw new Exception("Médico ja cadastrado!");
+            throw new Exception("Medico ja cadastrado!");
         }
 
         medico = new Medico(nome, endereco, cpf, telefone, crm, especialidade);
@@ -38,7 +38,7 @@ class FachadaMedico {
 
         if (medico == null) {
             DAO.rollback();
-            throw new Exception("Médico nao esta cadastrado!");
+            throw new Exception("Medico nao esta cadastrado!");
         }
         
         medico.setEspecialidade(especialidade);
@@ -53,7 +53,7 @@ class FachadaMedico {
 
         if (medico == null) {
             DAO.rollback();
-            throw new Exception("Médico nao esta cadastrado!");
+            throw new Exception("Medico nao esta cadastrado!");
         }
 
         daoMedico.delete(medico);
@@ -67,7 +67,7 @@ class FachadaMedico {
 
         if (medico == null) {
             DAO.rollback();
-            throw new Exception("Médico nao esta cadastrado!");
+            throw new Exception("Medico nao esta cadastrado!");
         }
 
         DAO.commit();
