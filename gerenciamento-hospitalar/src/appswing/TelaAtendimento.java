@@ -112,7 +112,7 @@ public class TelaAtendimento {
 		protocoloText = new JTextField();
 		protocoloText.setFont(new Font("Dialog", Font.PLAIN, 12));
 		protocoloText.setColumns(10);
-		protocoloText.setBounds(82, 264, 42, 20);
+		protocoloText.setBounds(82, 269, 42, 20);
 		frame.getContentPane().add(protocoloText);
 		
 		registrarButton = new JButton("Registrar");
@@ -165,7 +165,7 @@ public class TelaAtendimento {
 		dataLabel = new JLabel("Data: ");
 		dataLabel.setHorizontalAlignment(SwingConstants.LEFT);
 		dataLabel.setFont(new Font("Dialog", Font.PLAIN, 12));
-		dataLabel.setBounds(21, 232, 71, 14);
+		dataLabel.setBounds(150, 269, 71, 14);
 		frame.getContentPane().add(dataLabel);
 		
 		
@@ -173,11 +173,11 @@ public class TelaAtendimento {
 			dataText = new JFormattedTextField(new MaskFormatter("##/##/####"));
 		} 
 		catch (ParseException e1) {}
-		dataText.setBounds(67, 232, 80, 20);
+		dataText.setBounds(190, 269, 80, 20);
 		frame.getContentPane().add(dataText);
 
 		formatoDataLabel = new JLabel("(dd/mm/aaaa)");
-		formatoDataLabel.setBounds(158, 232, 88, 14);
+		formatoDataLabel.setBounds(270, 269, 88, 14);
 		frame.getContentPane().add(formatoDataLabel);
 
 		crmLabel = new JLabel("Médico - CRM: ");

@@ -21,7 +21,7 @@ public class TelaPrincipal {
 	private JFrame frame;
 	private JMenu Atendimentos;
 	private JMenu Medicos;
-  private JMenu Pacientes;
+	private JMenu Pacientes;
 	private JLabel label;
 
 	public static void main(String[] args) {
@@ -76,7 +76,7 @@ public class TelaPrincipal {
 		Atendimentos.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				TelaMedico tela = new TelaMedico();
+				TelaAtendimento tela = new TelaAtendimento();
 			}
 		});
 		menuBar.add(Atendimentos);

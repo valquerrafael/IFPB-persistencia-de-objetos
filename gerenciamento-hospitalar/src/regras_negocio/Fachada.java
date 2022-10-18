@@ -27,10 +27,6 @@ public class Fachada {
         FachadaPessoa.alterarEndereco(cpf, endereco);
     }
 
-    public static void alterarTelefone(String cpf, String telefoneAnterior, String telefoneNovo) throws Exception {
-        FachadaPessoa.alterarTelefone(cpf, telefoneAnterior, telefoneNovo);
-    }
-
     public static void adicionarTelefone(String cpf, String telefone) throws Exception {
         FachadaPessoa.adicionarTelefone(cpf, telefone);
     }

@@ -40,23 +40,6 @@ class FachadaPessoa {
         DAO.commit();
     }
 
-    static void alterarTelefone(String cpf, String telefoneAnterior, String telefoneNovo) throws Exception {
-        DAO.begin();
-        Pessoa pessoa = daoPessoa.read(cpf);
-
-        if (pessoa == null) {
-            DAO.rollback();
-            throw new Exception("Pessoa nao esta cadastrada!");
-        }
-
-        int indiceTelefoneAnterior = pessoa.getTelefones().indexOf(telefoneAnterior);
-        pessoa.getTelefones().add(indiceTelefoneAnterior, telefoneNovo);
-        pessoa.removerTelefone(telefoneAnterior);
-
-        daoPessoa.update(pessoa);
-        DAO.commit();
-    }
-
     static void adicionarTelefone(String cpf, String telefone) throws Exception {
         DAO.begin();
         Pessoa pessoa = daoPessoa.read(cpf);
